@@ -9,7 +9,22 @@
 </head>
 
 <body>
-    <h1>Myニュース プロフィール作成画面</h1>
+    
+    <!-- layouts/profile.blade.phpを読み込む -->
+    @extends('layouts.profile')
+    <!-- profile.blade.phpに'プロフィールの新規作成'を埋め込む -->
+    @section('title', 'My プロフィール')
+    <!-- profile.blade.phpに以下のタグを埋め込む -->
+    @section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>My プロフィール</h2>
+            </div>
+        </div>
+    </div>
+    @endsection
+        
 </body>
 
 </html>
