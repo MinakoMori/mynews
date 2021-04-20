@@ -8,8 +8,6 @@
         <title>MyNews</title>
     </head>
     <body>
-        <h1>Myニュース作成画面</h1>
-        
         <!-- layouts/admin.blade.phpを読み込む -->
         @extends('layouts.admin')
         <!-- admin.blade.phpに'ニュースの新規作成'を埋め込む -->
