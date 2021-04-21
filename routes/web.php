@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Laravel 12
 Route::group(['prefix' => 'admin'], function() {
     Route::get('news/create', 'Admin\NewsController@add');
     Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
@@ -24,6 +25,14 @@ Route::group(['prefix' => 'admin'], function() {
     
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     Route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth');
+});
+
+//Laravel 13
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+     Route::get('news/create', 'Admin\NewsController@add');
+     Route::post('news/create', 'Admin\NewsController@create');
+     Route::post('profile/create', 'Admin\ProfileController@create');
+     Route::post('profile/edit', 'Admin\ProfileController@update');
 });
 
 Auth::routes();
