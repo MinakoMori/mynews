@@ -8,6 +8,7 @@ class Profile extends Model
 {
     //
     protected $quarded = array('id');
+    protected $fillable = ['name','gender','hobby','introduction'];
     
     public static $rules = array(
         'name' => 'required',
