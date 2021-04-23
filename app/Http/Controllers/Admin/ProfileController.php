@@ -16,9 +16,8 @@ class ProfileController extends Controller
     
     public function create(Request $request)
     {
-        // Varidationを行う
+        // Validationを行う
         $this->validate($request, Profile::$rules);
-        
         $profile = new Profile;
         $form = $request->all();
         
