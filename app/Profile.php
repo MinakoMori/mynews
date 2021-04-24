@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    //
-    protected $quarded = array('id');
-    protected $fillable = ['name','gender','hobby','introduction'];
+    protected $guarded = array('id');
     
     public static $rules = array(
         'name' => 'required',
@@ -16,4 +14,10 @@ class Profile extends Model
         'hobby' => 'required',
         'introduction' => 'required',
     );
+    
+    // Profile Modelに関連付けを行う
+    public function histories_profile()
+    {
+      return $this->hasMany('App\HistoryProfile');
+    }
 }
