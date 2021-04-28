@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="title p-2">
-                            <h1>{{ str_limit($headline->title, 70) }}</h1>
+                            <h2>{{ str_limit($headline->title, 70) }}</h2>
                         </div>
                         <p class="body mx-auto">{{ str_limit($headline->body, 650) }}</p>
                     </div>
