@@ -1,4 +1,4 @@
-body {
+/*body {
     color: #000;
 }
 
@@ -54,4 +54,46 @@ body {
                 }
         }
     }
+}*/
+
+body {
+    color: #000;
+    font-size: 0.8em;
+}
+
+.header .logo {
+    width: 120px;
+    height: 82px;
+}
+
+.headline .caption {
+    position; relative;
+    width: 350px;
+}
+.headline .image img {
+    width: 100%;
+}
+.headline .title {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.headline h1 {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+
+.posts .date {
+    font-size: 0.6em;
+    color: #999999;
+}
+.posts .title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.posts .image img {
+    width: 250px;
 }
