@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Profile;
-use App\HistoryProfile;
+use App\ProfileHistory;
 use Carbon\Carbon;
 
 class ProfileController extends Controller
@@ -52,11 +52,11 @@ class ProfileController extends Controller
         $profile->fill($profile_form)->save();
         
         // 編集履歴を追加
-        $history = new HistoryProfile;
+        $history = new ProfileHistory;
         $history->profile_id = $profile->id;
         $history->edited_at = Carbon::now();
         $history->save();
         
-        return redirect('admin/profile/');
+        return redirect('admin/profile/create');
     }
 }
